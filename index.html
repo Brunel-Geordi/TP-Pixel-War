@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-colorpicker@3.4.0/dist/js/bootstrap-colorpicker.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-colorpicker@3.4.0/dist/css/bootstrap-colorpicker.min.css"
+    />
+    <title>Piwel War</title>
+
+    <style>
+      #canvas {
+        border: 2px solid black;
+        background-color: white;
+      }
+      #canvas:hover {
+        cursor: crosshair;
+      }
+      #color {
+        display: none;
+      }
+      body {
+        background-color: rgb(94, 97, 91);
+        background-size: contain;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+      }
+      #container {
+        display: flex;
+        justify-content: space-between;
+      }
+      #demo {
+        display: flex;
+        align-items: center;
+      }
+      #discuss {
+        display: block;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: aliceblue;
+      }
+      #chat_zone {
+        display: block;
+      }
+      #chat {
+        overflow-y: scroll;
+        height: 85vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="discuss">
+        <div id="chat"></div>
+        <div id="chat_zone">
+          <div id="log">
+            <input
+              type="text"
+              name=""
+              id="pseudo"
+              placeholder="Entrer votre pseudo"
+            />
+            <input type="button" name="" id="validate" value="Valider" />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Entrez votre message"
+              id="msg"
+              disabled
+            />
+            <input type="button" value="Envoyer" id="send" />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div id="name">Pseudo : <label id="user"></label></div>
+        <canvas id="canvas" width="800" height="600"></canvas>
+      </div>
+      <div id="demo">
+        <input type="text" value="rgb(255, 128, 0)" id="color" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
